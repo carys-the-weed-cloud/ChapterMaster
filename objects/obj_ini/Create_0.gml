@@ -44,7 +44,7 @@ home_planet = 2;
 // Equipment- maybe the bikes should go here or something?          yes they should
 equipment = {};
 
-/// @type {Struct<Struct.ArtifactStruct>} 
+/// @type {Struct<Struct.ArtifactStruct>}
 artifact_map = {};
 
 squads = {};
@@ -170,18 +170,17 @@ serialize = function() {
             if (name[_coy][_mar] != "") {
                 var _marine_json = jsonify_marine_struct(_coy, _mar, false);
                 array_push(_marines, _marine_json);
-            } 
+            }
         }
     }
 
     var _artifact_list = [];
     var _artifact_names = struct_get_names(artifact_map);
     var _artifact_len = array_length(_artifact_names);
-    for (var k = 0; k < _artifact_len; k++){
+    for (var k = 0; k < _artifact_len; k++) {
         var _artifact_name = _artifact_names[k];
         var _artifact = artifact_map[$ _artifact_name];
         array_push(_artifact_list, _artifact.to_json());
-    
     }
 
     var save_data = {

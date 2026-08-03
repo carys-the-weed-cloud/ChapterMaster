@@ -136,7 +136,6 @@ function scr_marine_spawn_age() {
     } else {
         age = irandom_range(_minimum_age, _maximum_age);
     }
-
 }
 
 /// @self Struct.TTRPG_stats

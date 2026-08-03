@@ -936,6 +936,7 @@ function TTRPG_stats(faction, comp, mar, class = "marine", other_spawn_data = {}
         }
         array_push(epithets, epithet);
     };
+
     static name = function() {
         return obj_ini.name[company][marine_number];
     }; // get marine name
@@ -2231,10 +2232,7 @@ function TTRPG_stats(faction, comp, mar, class = "marine", other_spawn_data = {}
         var artifact_list = equipped_artifacts();
         for (var i = 0; i < array_length(artifact_list); i++) {
             var arti = fetch_artifact(artifact_list[i]);
-            arti.set_bearer([
-                end_company,
-                end_slot,
-            ]);
+            arti.set_bearer([end_company, end_slot]);
         }
     };
 
